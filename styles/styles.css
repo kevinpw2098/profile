@@ -15,6 +15,7 @@ header {
     color: #fff;
     background-image: url('../images/background.jpg');
     background-size: cover;
+    background-color: #000;
     margin-bottom: 30px;
 }
 
@@ -23,6 +24,7 @@ header li {
     padding-right: 5px;
     border-radius: 5px;
     border-right: 5px solid #fff;
+    border-bottom: solid #fff 2px;
     margin-right: 5px;
 }
 
@@ -153,6 +155,11 @@ li {
     display: inline;
 }
 
+.mobile-nav-ul {
+    display: none;
+}
+
+
 /*-- ID Selectors --*/
 
 #wider-h1 {
@@ -183,53 +190,43 @@ li {
     background-color: #000;
 }
 
+#response-message {
+    margin-top: 20px;
+}
+
+#error-message {
+    color: #cb0b0b;
+}
 
 
 
-
-
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 768px) {
 
     /*-- Tag Selectors --*/
+    header li {
+        display: block;
+        margin-bottom: 20px;
+        border-bottom: solid #fff 2px;
+    }
 
     nav {
-        display: none;
+        position: fixed;
+        text-align: center;
     }
 
     /*-- Class Selectors --*/
 
     .welcome-div {
-        width: 95%;
+        width: 100%;
     }
 
     .flex-item {
         width: 100%;
     }
 
-    .hamburger {
-        display: inline-block;
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-
-    .hamburger-line {
-        width: 35px;
-        height: 5px;
-        background-color: #fff;
-        margin: 6px 0;
-    }
-
 
     /*-- ID Selectors --*/
 
-    #wider-h1 {
-        display: none;
-    }
-
-    #mobile-h1 {
-        display: block;
-    }
 
     #profile-picture {
         order: 1;
@@ -272,3 +269,23 @@ li {
     }
     
 }
+
+@media only screen and (max-width: 430px) {
+
+    nav {
+        display: none;
+    }
+
+    #h1-name {
+        font-size: 36px;
+    }
+
+    #wider-h1 {
+        display: none;
+    }
+    
+    #mobile-h1 {
+        display: block;
+    }
+}
+
